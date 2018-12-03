@@ -1,0 +1,11 @@
+<section ng-init="ListCtrl.onInit()" class="mt-4">
+    <div ng-repeat="post in ListCtrl.posts">
+        <a class="link-item" ng-href="/#!/single/{{post.id}}">Go To</a>
+        <h4>{{post.title}}</h4>
+        <span>Posted by: {{post.author}}</span>
+        <p>{{post.body}}</p>
+        <a ng-href="/#!/single/{{post.id}}/edit" class="btn btn-primary">Edit</a>
+        <hr>
+    </div>
+    <button class="btn btn-default" ng-click="ListCtrl.refreshPosts()">Refresh</button>
+</section>
